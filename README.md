@@ -177,20 +177,26 @@ Proper video capture and writer resource management through try-finally blocks e
 
 ```
 SiteSafety-YOLO/
+├── assets/
+│   └── demo_preview.gif        # Demo animation for system visualization
 ├── src/
 │   ├── __init__.py
-│   ├── config.py              # Configuration parameters and paths
+│   ├── config.py               # Configuration parameters and paths
 │   ├── detector.py             # YOLOv8n model initialization and inference
 │   └── visualizer.py           # Frame annotation and dashboard rendering
 ├── data/
-│   ├── input/                  # Input video files
-│   └── output/                 # Processed annotated videos
+│   ├── input/                  # Input media (video and test images)
+│   │   ├── worker-zone-detection.mp4
+│   │   └── test_image.png
+│   └── output/                 # Processed annotated outputs
+│       └── processed_worker-zone-detection.mp4
 ├── notebooks/
 │   └── exploration.ipynb       # Research and analysis notebooks
+├── yolov8n.pt                  # YOLOv8n model weights (Ultralytics)
 ├── main.py                     # Video processing pipeline entry point
-├── requirements.txt             # Python dependencies
-├── Dockerfile                   # Container configuration
-└── README.md                   # This file
+├── requirements.txt            # Python dependencies
+├── Dockerfile                  # Container configuration
+└── README.md
 ```
 
 ## Configuration
